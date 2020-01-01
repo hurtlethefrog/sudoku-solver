@@ -24,9 +24,25 @@ def empty():
             if board[i][k] == 0:
                 return (i, k)
 
-# def valid():
+def valid(b, num, pos):
 
+    for i in range(len(b[0])):
+        if b[pos[0]][i] == num and pos[1] !=i:
+            return False
 
+    for i in range(len(b)):
+        if b[i][pos[1]] == num and pos[0] !=i:
+            return False
+
+    coor_x = pos[1] // 3   
+    coor_y = pos[0] // 3
+
+    for i in range(coor_y * 3, coor_y * 3 + 3)
+        for k in range(coor_x * 3, coor_x * 3 + 3)
+            if b[i][k] == num and (i, k) != pos:
+                return False
+    return True
+    
 def visual_board(b):
     # visualize sudoku b when given 9x9 array of arrays
     for i in range(len(b)):

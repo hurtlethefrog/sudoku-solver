@@ -86,5 +86,5 @@ def visual_board(b):
 
 visual_board(board)
 exe(board)
-print('_-_-_-_-_-_-_-_-_-_-_-_')
+print('#_-_-_-_-_-_-_-_-_-_-_-_#')
 visual_board(board)
